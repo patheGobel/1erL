@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color,soul}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\usepackage{envmath}
+\author{Destinés à la 1erL\\Au Lycée de Dindéferlo}
+\title{\textbf{Systèmes D'Equations et D'Inequations linéaires à trois inconnues}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+%This command takes a colour as an optional argument; the default colour is black.
+\usetikzlibrary{shapes.geometric,fit}
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{document}
+\maketitle
+\newpage
+
+
+\underline{\textbf{\textcolor{red}{I°)Systèmes D'Equations}}}\\
+
+
+\underline{\textbf{\textcolor{red}{1.Système de deux équations linéaires à 2 inconnues}}}\\
+
+\underline{\textbf{\textcolor{red}{2.Systèmes de deux équations linéaires à 3 ou 4 inconnues (pivot de Gauss)}}}\\
+
+
+\underline{\textbf{\textcolor{red}{II°)Systèmes D'inequations}}}\\
+
+\underline{\textbf{\textcolor{red}{1.Systèmes de deux inequations linéaires à 2 inconnues}}}\\
+
+\underline{\textbf{Exemple}}\\
+
+\begin{System}
+  x -2y+1\geq0 \\
+  2x + y -3<0
+\end{System}
+est un système de deux inéquations linéaires à deux inconnues x et y\\
+
+\textbf{Résolution par la méthode graphique}\\
+On commence par représenter graphiquement la droite $(D_{1})$ d'équation \\$x -2y+1=0$ et la droite $(D_{2})$ d'équation $2x + y -3=0$ dans un repère \\orthonormé\\
+
+Puis on choisit un point qui n'est ni sur $(D_{1})$, ni sur $(D_{2})$ et dont les coordonnées sont connues.\\
+Par exemple le point O(0,0).\\
+\\
+En remplaçant $x$ et $y$ par les coordonnées de O dans l'inéquation 2, on a : 
+$0-2(0)+1\geq0$ c'est à dire $1\geq0$ vrai donc les cordonnées de O vérifie l'inéquation 1.
+\\
+On barre donc le demi-plan de frontière $(D_{1})$ ne contenant pas O.\\
+\\
+En remplaçant $x$ et $y$ par les coordonnées de O dans l'inéquation 2, on a : 
+$2(0)+0-3<0$ c'est à dire $-3<0$ vrai donc les cordonnées de O vérifie l'inéquation 2.
+\\
+On barre donc le demi-plan de frontière $(D_{2})$ ne contenant pas O.\\
+\underline{\textbf{\textcolor{red}{1.Systèmes de deux inéquations linéaires à 3 inconnues.}}}\\
+\\
+\underline{\textbf{Exemple}}\\
+
+\begin{System}
+  -x+y+2\geq0 \\
+   2x-y-4<0 \\
+   x - 2y -1>0
+\end{System}
+est un système de trois inéquations à deux inconnues x et y.\\
+\textbf{Résolution par la méthode graphique}\\
+\\
+\underline{\textbf{\textcolor{red}{2.Problèmes d'optimisation}}}\\
+
+\end{document}
