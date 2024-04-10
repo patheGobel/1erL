@@ -1,0 +1,230 @@
+\documentclass[12pt]{article}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+\author{Destinés à la 1\textsuperscript{ère}L\\Au Lycée de Dindéfelo}
+\title{\textbf{Leçon 4 : Limites d’une fonction\\Taisez-vous et suivez!!!}}
+\date{\today}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+
+% Commande pour la couleur d'accentuation
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{\underline{\textbf{\textcolor{red}{I. Limites d’une fonction en un nombre réel}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Limite finie d’une fonction en un nombre réel}}}}
+\subsubsection*{\textcolor{red}{a. Notion de limite en un nombre réel}}
+Soit f la fonction définie par $f(x) = x^{2}$ . Remplissons le tableau suivant :\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$x$ & 1,999 & 1,9999 & 1,99999 & 2,0001 & 2,00001\\
+\hline
+$f(x)$ &3,996 &3,9996 &3,99996 & 4,0001&4,000001\\
+\hline
+\end{tabular}
+\end{center}
+D’après le tableau ci-dessus, on constate que si les valeurs de x sont très proches de 2 alors celles de f(x) sont très proches de 4. On dit que la limite de f(x) lorsque x tend vers 2 est égale à 4. On note \textcolor{blue}{\[\lim_{x \to 2}f(x)=4\]} et on lit « limite de f(x) lorsque x tend vers 2 égale à 4.»
+\subsubsection*{\textcolor{red}{b. Définition intuitive et notation}}
+Si les valeurs de x sont très proches d’un nombre réel a et qu’alors celles de f(x) sont très
+proches d’un nombre réel l, on dit que la limite de f(x) lorsque x tend vers a est égale à l. On note \[\lim_{x \to a}f(x)=\mathfrak{l}\] et on lit : \textbf{« limite de f(x) lorsque x tend vers a égale à l. »}\\
+\textbf{Nous admettons que lorsqu’une fonction admet une limite en un nombre réel alors celle-ci est unique.} 
+\subsubsection*{\textcolor{red}{c. Propriété}}
+Si f est une fonction polynôme et si a un nombre réel alors \[\lim_{x \to a}f(x)=f(a)\]
+\subsubsection*{\textcolor{red}{Exemple}}
+Soit f telle que $f(x) = 2x^{3}-3x^{2}-x+7.$ Calculons la limite de f(x) lorsque x tend vers -1.\\
+Comme f est une fonction polynôme alors\\ 
+\[\lim_{x \to -1}f(x)=f(-1)=2(-1)^{3}-3(-1)^{2}-(-1)+7=3\]
+\subsection*{\underline{\textbf{\textcolor{red}{2. Limites infinies d’une fonction en un nombre réel}}}}
+\subsubsection*{\textcolor{red}{a. Limite à gauche, limite à droite en un nombre réel}}
+Soit f, la fonction définie par $f(x) = \frac{1}{x}$. Remplissons le tableau suivant :
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+$x$ & -0,001 & -0,0001 & -0,00001 & -0,000001 & 0,001 & 0,0001 & 0,00001 & 0,000001\\
+\hline
+$f(x)$ &-1000 &-10000 &-100000 &-1000000 &1000 &10000 &100000 &1000000\\
+\hline
+\end{tabular}
+\end{center}
+En examinant les 4 premières colonnes du tableau ci-dessus, on constate que si les valeurs de x
+sont de plus en plus proches de 0 mais en étant inférieures à 0 alors celles de f(x) sont très très grandes en valeurs absolues mais en étant négatives. On dit que la limite de f(x) lorsque x tend vers 0 à gauche est égale à -$\infty$. On note 
+$\lim_{x \to 0^{-}}f(x)=-\infty$ et on lit : \textbf{« limite de f(x) lorsque x tend vers 0 moins égale moins l’infini. »}\\
+\\
+En examinant les 4 dernières colonnes du tableau ci-dessus, on constate que si les valeurs de x
+sont de plus en plus proches de 0 mais en étant supérieures à 0 alors celles de f(x) sont très très
+grandes mais en étant positives. On dit que la limite de f(x) lorsque x tend vers 0 à droite est
+égale à +$\infty$. On note $\lim_{x \to 0^{+}}f(x)=+\infty$ et on lit : 
+\textbf{« limite de f(x) lorsque x tend vers 0 plus égale plus l’infini. »}
+\subsubsection*{\textcolor{red}{b. Définition intuitive et notation}}
+$\bullet$ Si les valeurs de x sont de plus en plus proches d’un nombre réel a mais en étant
+inférieures à a alors que celles de f(x) sont très très grandes en valeur absolue, on dit que
+la limite de f(x) lorsque x tend vers a à gauche est infinie.
+$\bullet$ Si les valeurs de x sont de plus en plus proches d’un nombre réel a mais en étant
+supérieures à a alors que celles de f(x) sont très très grandes en valeur absolue, on dit que
+la limite de f(x) lorsque x tend vers a à droite est infini
+\subsubsection*{\textcolor{red}{c. Remarque}}
+\begin{itemize}
+\item Si \[\lim_{x \to a^{-}}f(x) = \lim_{x \to a^{+}}f(x)\] alors f admet une limite en a et on a :
+\[\lim_{x \to a^{-}}f(x) = \lim_{x \to a^{+}}f(x)=\lim_{x \to a}f(x)\]
+\item Si \[\lim_{x \to a^{-}}f(x) \neq \lim_{x \to a^{+}}f(x)\] alors f n’admet pas de limite en a.\\
+\end{itemize}
+\subsubsection*{\textcolor{red}{Exemple}}
+\section*{\underline{\textbf{\textcolor{red}{II. Limites d’une fonction à l’infini}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{1. Limites infinies d’une fonction à l’infini}}}}
+\subsubsection*{\textcolor{red}{a. Notion de limite infinie à l’infini}}
+Soit f la fonction définie par $f(x) = x^{2}$ . Remplissons le tableau suivant :\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+$x$ & $-10^{6}$ & $-10^{5}$ & $-10^{4}$ &$-10^{3}$ & $10^{4}$ & $10^{5}$ & $10^{6}$ & $10^{7}$\\
+\hline
+$f(x)$ &$10^{12}$&$10^{10}$ &$10^{8}$ &$10^{6}$ &$10^{8}$ &$10^{10}$ &$10^{12}$ &$10^{14}$\\
+\hline
+\end{tabular}
+\end{center}
+En examinant les 4 premières colonnes du tableau ci-dessus, on constate que si les valeurs de x sont de plus en plus grandes en valeurs absolues en étant négatives alors celles de f(x) sont de plus en plus grandes en étant positives. On dit que la limite de f(x) lorsque x tend vers $-\infty$ est égale à $+\infty$. On note $\lim_{x \to -\infty}f(x)=+\infty$\\
+\\
+En examinant les 4 dernières colonnes du tableau, on constate que si les valeurs de x sont de
+plus en plus grandes en étant positives alors celles de f(x) sont de plus en plus grandes en étant positives. On dit que la limite de f(x) quand x tend vers $+\infty$ est égale à $+\infty$. On note $\lim_{x \to +\infty}f(x)=+\infty$\\
+\subsubsection*{\textcolor{red}{b. Définitions intuitives et notation}}
+Si les valeurs de x sont de plus en plus grandes en étant positives alors que celles de f(x) sont :\\
+$\bullet$de plus en plus grandes en valeurs absolues en étant négatives, on dit que la limite de
+f(x) lorsque x tend vers $+\infty$ est égale à $-\infty$. On note :\\ 
+$\lim_{x \to +\infty}f(x)=-\infty$\\
+$\bullet$de plus en plus grandes en étant positives, on dit la limite de f(x) lorsque x tend vers $+\infty$ est égale à $+\infty$. On note : $\lim_{x \to +\infty}f(x)=+\infty$\\
+
+\subsubsection*{\textcolor{red}{c. Théorème}}
+$\bullet$Si n est un entier naturel quelconque alors $\lim_{x \to +\infty}x^{n}=+\infty$\\
+$\bullet$Si n est un entier naturel pair alors $\lim_{x \to -\infty}x^{n}=+\infty$\\
+$\bullet$Si n est un entier naturel impair alors $\lim_{x \to -\infty}x^{n}=-\infty$\\
+\subsubsection*{\textcolor{red}{Exemple}}
+\begin{itemize}
+\item $\lim_{x \to +\infty}x=+\infty$ ; $\lim_{x \to +\infty}x^{2}=+\infty$ ; 
+$\lim_{x \to +\infty}x^{5}=+\infty$\\
+\item $\lim_{x \to -\infty}x=-\infty$ ; $\lim_{x \to -\infty}x^{2}=+\infty$ ; 
+$\lim_{x \to -\infty}x^{5}=-\infty$
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{2. Limites finies d’une fonction à l’infini}}}}
+\subsubsection*{\textcolor{red}{a.Notion de limite finie à l’infini}}
+Soit f la fonction définie par $\frac{1}{x}$ . Remplissons le tableau suivant :
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$x$ & -100000 & -10000 & -1000 & 1000& 10000 & 100000 \\
+\hline
+$f(x)$ & & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+En examinant les 3 premières colonnes du tableau ci-dessus, on constate que si les valeurs de x sont de plus en plus grandes en valeurs absolues en étant négatives alors celles de f(x) sont de plus en plus proches de 0. On dit que la limite de f(x) lorsque x tend vers $-\infty$ est égale à 0. On note $\lim_{x \to +\infty}f(x)=0$\\
+En examinant les 3 dernières colonnes du tableau, on constate que si les valeurs de x sont de
+plus en plus grandes en étant positives alors celles de f(x) sont de plus en plus proches de 0. On dit que la limite de f(x) quand x tend vers $+\infty$est égale à 0. On note 
+$\lim_{x \to +\infty}f(x)=0$
+\subsubsection*{\textcolor{red}{b.Définitions intuitives et notation}}
+Si les valeurs de x sont de plus en plus grandes en étant positives alors que celles de f(x) sont de plus en plus proches d’un nombre réel l alors on dit que la limite de f(x) lorsque x tend vers $+\infty$est égale à l. On note : $\lim_{x \to +\infty}f(x)=l$\\
+Si les valeurs de x sont de plus en plus grandes en valeurs absolues mais en étant négatives et qu’alors celles de f(x) deviennent de plus en plus proches d’un nombre réel l alors on dit que la limite de f(x) lorsque x tend vers $-\infty$ est égale à l. On note :
+$\lim_{x \to -\infty}f(x)=l$\\
+Nous admettons que lorsqu’une fonction admet une limite à l’infini alors celle-ci est unique.
+\subsubsection*{\textcolor{red}{c.Théorème}}
+Si n est un entier naturel quelconque alors $\lim_{x \to \infty}\frac{1}{x^{n}}=0$
+\subsubsection*{\textcolor{red}{Exemple}}
+\begin{itemize}
+\item $\lim_{x \to +\infty}\frac{1}{x}=0$ ; $\lim_{x \to +\infty}\frac{1}{x^{2}}=0$
+\item $\lim_{x \to -\infty}\frac{1}{x}=0$ ; $\lim_{x \to -\infty}\frac{1}{x^{2}}=0$
+\end{itemize}
+%\subsubsection*{\textcolor{red}{Limite finie d’une fonction en $+\infty$}}
+
+%\subsubsection*{\textcolor{red}{Limite finie d’une fonction en $-\infty$}}
+%\subsubsection*{\textcolor{red}{Remarque}}
+
+\section*{\underline{\textbf{\textcolor{red}{III. Opérations sur les limites}}}}
+Soient f et g des fonctions définies par f(x) et g(x), l, l’ et a sont des nombres réels ou bien $+\infty$.
+\subsection*{\underline{\textbf{\textcolor{red}{1. Limites d’une somme f(x)+g(x)}}}}
+Pour calculer $\lim_{x \to a}[f(x)+g(x)]$, il faut calculer $\lim_{x \to a}f(x)$ et 
+$\lim_{x \to a}g(x)$. Le tableau ci-dessous donne dans chaque cas 
+$\lim_{x \to a}[f(x)+g(x)]$ lorsque $\lim_{x \to a}f(x)$ et $\lim_{x \to a}g(x)$ sont connues.\\
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$\lim_{x \to \infty}f(x)$ & $l$ & $l$ & $l$ & $+\infty$ & $-\infty$ & $+\infty$ \\
+\hline
+$\lim_{x \to \infty}f(x)$  & $l'$ & $+\infty$ & $-\infty$ & $+ \infty$ & $-\infty$ & $-\infty$ \\
+\hline
+$\lim_{x \to a}[f(x)+g(x)]$ & $l+l'$ & $+\infty$ & $-\infty$ & $+\infty$ & $-\infty$ & Forme indéterminée \\
+\hline
+\end{tabular}
+\\\\
+Une forme indéterminée signifie qu’on ne peut pas immédiatement donner la limite. Lorsqu’on
+a une forme indéterminée, on verra dans la suite, des méthodes pour trouver la limite.
+\subsection*{\underline{\textbf{\textcolor{red}{2. Limites d’un produit}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{a.Limites de $\alpha\times f(x)$ où $\alpha$ est un nombre réel constant}}}}
+Pour calculer $\lim_{x \to a}\alpha\times f(x)$, il faut calculer 
+$\lim_{x \to a}f(x)$. Le tableau ci-dessous donne dans chaque cas $\lim_{x \to a}\alpha\times f(x)$ lorsque $\lim_{x \to a}f(x)$ est connue.\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\lim_{x \to \infty}f(x)$ & $l$ & $+\infty$ & $-\infty$ \\
+\hline
+$\lim_{x \to a}\alpha \times f(x)$ & $\alpha l$ & $+\infty$ si $\alpha > 0$ & $-\infty$ si $\alpha > 0$ \\
+\hline
+$\lim_{x \to a}\alpha \times f(x)$ & $\alpha l$ & $-\infty$ si $\alpha < 0$ & $+\infty$ si $\alpha < 0$ \\
+\hline
+\end{tabular}
+\subsection*{\underline{\textbf{\textcolor{red}{Exemples}}}}
+\begin{itemize}
+\item Calculons $\lim_{x \to +\infty}2x^{2}$; $\lim_{x \to +\infty}x^{2}=+\infty$ donc $\lim_{x \to +\infty}2x^{2}=+\infty$
+\item Calculons $\lim_{x \to +\infty}-2x^{2}$; $\lim_{x \to +\infty}x^{2}=+\infty$ donc $\lim_{x \to +\infty}-2x^{2}=-\infty$
+\item Calculons $\lim_{x \to -\infty}-2x^{3}$; $\lim_{x \to -\infty}x^{3}=-\infty$ donc $\lim_{x \to -\infty}-2x^{3}=+\infty$
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{b.Limites d’un produit $f(x)\times g(x)$}}}}
+Pour calculer lim $\lim_{x \to a}[f(x)\times g(x)]$, il faut calculer $\lim_{x \to a}f(x)$ et $\lim_{x \to a}g(x)$. Le tableau ci-dessous donne dans chaque cas $\lim_{x \to a}[f(x)\times g(x)]$ lorsque $\lim_{x \to a}f(x)$ et $\lim_{x \to a}g(x)$ sont connues.\\
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$\lim_{x \to a}f	(x)$ & $l$ & $l>0$ & $l>0$ & $l<0$ &$l<0$& $+\infty$&$+\infty$&$-\infty$& 0\\
+\hline
+$\lim_{x \to a}g(x)$ & $l'$ & $+\infty$ & $-\infty$ & $+\infty$ &$-\infty$ &$+\infty$&
+$-\infty$&$-\infty$&$\infty$\\
+\hline
+$\lim_{x \to a}g(x)\times f(x)$ & $ll'$ & $+\infty$ & $-\infty$ & $-\infty$ &$+\infty$ &$+\infty$&$-\infty$&$+\infty$&Forme indéterminée\\
+\hline
+\end{tabular}
+\subsection*{\underline{\textbf{\textcolor{red}{3. Limites d’un quotient}}}}
+\subsection*{\underline{\textbf{\textcolor{red}{a. Limites de $\frac{\alpha}{f(x)}$où$\alpha$ est un reél constant.}}}}
+Pour calculer $\lim_{x \to \alpha}\frac{\alpha}{f(x)}$ il faut calculer $\lim_{x \to \alpha}fx)$.Le tableau ci-dessous donne dans chaque cas $\lim_{x \to \alpha}\frac{\alpha}{f(x)}$
+lorsque $\lim_{x \to \alpha}\frac{\alpha}{f(x)}$ est connue.\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\lim_{x \to a}f	(x)$ & $l\neq 0$ & $\infty$ & $0$\\
+\hline
+$\lim_{x \to a}\frac{\alpha}{f(x)}$ & $\frac{\alpha}{l}$ & $0$ &si $\alpha \neq 0$ on a: $\infty$ ; sinon on a FI\\
+\hline
+\end{tabular}\\
+\underline{\textbf{\textcolor{red}{Exemple}}}
+\begin{itemize}
+\item Calculons $\lim_{x \to 1}\frac{1}{2x+1}$
+\item Calculons $\lim_{x \to +\infty}\frac{-2}{x}$
+\end{itemize}
+\subsection*{\underline{\textbf{\textcolor{red}{b. Limites de $\frac{f(x)}{g(x)}$}}}}
+Pour calculer $\lim_{x \to a}\frac{f(x)}{g(x)}$ il faut calculer $\lim_{x \to a}f(x)$ et 
+$\lim_{x \to a}g(x)$ . Le tableau ci-dessous donne dans
+\subsection*{\underline{\textbf{\textcolor{red}{4. Théorèmes}}}}
+\end{document}
